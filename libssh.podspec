@@ -17,14 +17,7 @@ Pod::Spec.new do |spec|
 
 
   spec.source_files = "include/**/*.h"
-  spec.preserve_paths = "include", "include/libssh", "lib"
-
-  spec.libraries = "ssh", "z"
-
-  spec.xcconfig = {
-    "LIBRARY_SEARCH_PATHS" => '"$(PODS_ROOT)/libssh/lib"'
-  }
-
-  spec.frameworks =  "libressl"
+  
+  spec.vendored_libraries = "lib/libssh.4.8.6.dylib"
 
 end
